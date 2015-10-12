@@ -8,52 +8,30 @@
 #import "ViewController.h"
 #import <WLKit/WLKit.h>
 @interface ViewController ()
-{
-    CAShapeLayer *circleLayer;
-    
-}
+
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-    UIImageView *IM = [[UIImageView alloc]init];
-//    [uiview setBackgroundColor:[UIColor redColor]];
-    [IM setImage:[UIImage imageNamed:@"logo1"]];
-    [self.view addSubview:IM];
-    PREPCONSTRAINTS(IM);
-    CONSTRAIN_SIZE(IM, 100, 100)
-    [self.view addConstraints:@[CONSTRAINT_CENTERING_H(IM),CONSTRAINT_CENTERING_V(IM)]];
-//    [WLCommon shakeView:uiview RepeatCount:4];
-//    [WLCommon bounceView:IM];
-    UIView *circleView = [UIView new];
-    PREPCONSTRAINTS(circleView);
-    CONSTRAIN_SIZE(circleView, 100, 100)
-    [circleView setBackgroundColor:[UIColor whiteColor]];
-//    [IM addSubview:circleView];
-//    [IM addConstraints:@[CONSTRAINT_CENTERING_H(circleView),CONSTRAINT_CENTERING_V(circleView)]];
-
-    circleLayer = [CAShapeLayer new];
-    [circleLayer setFrame:CGRectMake(0, 0, 100, 100)];
-    circleLayer.lineWidth = 10;
-    circleLayer.fillColor = [UIColor clearColor].CGColor;
-    circleLayer.strokeColor = [UIColor redColor].CGColor;
-    circleLayer.strokeEnd = 1;
-    CGRect circleFrame = [self getCircleFrameWithLayer:circleLayer];
-    UIBezierPath *circlepath = [UIBezierPath bezierPathWithOvalInRect:circleFrame];
-    [circleLayer setPath:circlepath.CGPath];
-    [circleView.layer addSublayer:circleLayer];
-    [circleView setBackgroundColor:[UIColor clearColor]];
-    [circleLayer removeFromSuperlayer];
-    [IM.layer setMask:circleLayer];
-    [self performSelector:@selector(request) withObject:nil afterDelay:1];
+    // 将一个红色的view 尺寸为100 100 位于视图中心
+    //初始化View
+    UIView *view = [UIView new];
+    //添加进父视图
+    [self.view addSubview:view];
+    //设置背景颜色
+    [view setBackgroundColor:[UIColor redColor]];
+    /*** 布局核心 ***/
+    //准备好view 为view添加autolayout属性
+    PREPCONSTRAINTS(view);
+    //设置尺寸
+    CONSTRAIN_SIZE(view, 100, 100);
+    //在父视图居中
+    CENTER(view);
+    /*** ***/
     
-    
-
-    
-}
+   }
 -(void)request
 {
 //       [ProgressHUD showSuccess:@"YES"];

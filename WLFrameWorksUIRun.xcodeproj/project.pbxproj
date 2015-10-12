@@ -168,7 +168,6 @@
 /* Begin PBXFileReference section */
 		0FD983281BCA6DD4008FB923 /* NSString+Extended.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Extended.h"; sourceTree = "<group>"; };
 		0FD983291BCA6DD4008FB923 /* NSString+Extended.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extended.m"; sourceTree = "<group>"; };
-		FE38A8CA1B91AAE0008337BF /* WLKitBundle copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "WLKitBundle copy-Info.plist"; path = "/Users/Ronaldinho/Desktop/Test/WLFrameWorksUIRun/WLKitBundle copy-Info.plist"; sourceTree = "<absolute>"; };
 		FE38A8CB1B91AB95008337BF /* WLKit.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = WLKit.bundle; sourceTree = SOURCE_ROOT; };
 		FE3F739C1B9D793300B370F0 /* WLFrameWorksUIRun-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WLFrameWorksUIRun-Bridging-Header.h"; sourceTree = "<group>"; };
 		FE3F739D1B9D793300B370F0 /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
@@ -227,7 +226,6 @@
 		FEA834E81B27ECF800438BF2 /* DeviceJudge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceJudge.m; sourceTree = "<group>"; };
 		FECDB5ED1B2C69830087DF24 /* ConfirNetEngineUrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfirNetEngineUrl.h; sourceTree = "<group>"; };
 		FEE568E21B9FE04700FA5656 /* CustomPopVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomPopVC.swift; sourceTree = "<group>"; };
-		FEF13BA21BB1142C00710BCC /* WLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WLKit.framework; path = "../xueche-app-ios/WLKit.framework"; sourceTree = "<group>"; };
 		FEF4B6D81B2C0BFB00D5597A /* NSData+MKBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+MKBase64.h"; sourceTree = "<group>"; };
 		FEF4B6D91B2C0BFB00D5597A /* NSData+MKBase64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+MKBase64.m"; sourceTree = "<group>"; };
 		FEF4B6DA1B2C0BFB00D5597A /* NSDate+RFC1123.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+RFC1123.h"; sourceTree = "<group>"; };
@@ -366,7 +364,6 @@
 		FEA834191B27DC2400438BF2 = {
 			isa = PBXGroup;
 			children = (
-				FEF13BA21BB1142C00710BCC /* WLKit.framework */,
 				FEA834A51B27DCA300438BF2 /* Foundation.framework */,
 				FEA834A31B27DC9E00438BF2 /* QuartzCore.framework */,
 				FEA834A11B27DC9800438BF2 /* UIKit.framework */,
@@ -375,7 +372,6 @@
 				FEA834511B27DC4F00438BF2 /* WLKit */,
 				FEA834601B27DC4F00438BF2 /* WLKitTests */,
 				FEA834231B27DC2400438BF2 /* Products */,
-				FE38A8CA1B91AAE0008337BF /* WLKitBundle copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
