@@ -34,12 +34,12 @@ static NetEngine *_instance=nil;
 }
 +(void) showAlert:(NSString *)theMsg
 {
-    [ProgressHUD showSuccess:theMsg];
+    [WLProgressHUD showSuccess:theMsg];
 }
 
 +(void)cancel
 {
-    [ProgressHUD dismiss];
+    [WLProgressHUD dismiss];
     [_instance cancelAllOperations];
 }
 #pragma mark - fileAction
@@ -59,7 +59,7 @@ static NetEngine *_instance=nil;
     DLog(@"%@",url);
     
 //       if(maskName!=nil)
-        [ProgressHUD show:maskName];
+        [WLProgressHUD show:maskName];
     
     MKNetworkOperation *op = [self operationWithPath:url params:nil httpMethod:@"GET"];
     //[op setCustomPostDataEncodingHandler:^NSString *(NSDictionary *postDataDict) {return msg;}forType:@"text/xml"];
@@ -68,15 +68,15 @@ static NetEngine *_instance=nil;
         NSData *responseData=[completedOperation responseData];
         
         if (!responseData) {
-            [ProgressHUD showError:@"数据有误"];
-            //            [ProgressHUD dismiss];
-            [ProgressHUD setAnimationDelay:1.0];            errorBlock?errorBlock(nil):nil;
+            [WLProgressHUD showError:@"数据有误"];
+            //            [WLProgressHUD dismiss];
+            [WLProgressHUD setAnimationDelay:1.0];            errorBlock?errorBlock(nil):nil;
         }else{
-            [ProgressHUD dismiss];
+            [WLProgressHUD dismiss];
             completionBlock(responseData,NO);
         }
     } errorHandler:^(MKNetworkOperation *completedOperation, NSError *error) {
-        [ProgressHUD showError:SEVER_ERROR_STRING];
+        [WLProgressHUD showError:SEVER_ERROR_STRING];
         DLog(@"%@%@",SEVER_ERROR_STRING,url);
         errorBlock?errorBlock(nil):nil;
     }];
@@ -130,7 +130,7 @@ static NetEngine *_instance=nil;
     DLog(@"%@",url);
     
 //        if(maskName!=nil)
-        [ProgressHUD show:maskName];
+        [WLProgressHUD show:maskName];
     //MKNetworkOperation *operation = [engine operationWithPath:@"addPrblem" params:params httpMethod:@"POST"];
     //[operation addFile:imagePath forKey:@"PIMG" mimeType:@"png"];
     //MKNetworkOperation *op = [self operationWithPath:url params:nil httpMethod:@"GET"];
@@ -143,18 +143,18 @@ static NetEngine *_instance=nil;
 
         
         if (!responseStringTemp) {
-            //            [SVProgressHUD dismissWithError:@"数据有误"];
-            [ProgressHUD showError:@"数据有误"];
-            //            [ProgressHUD dismiss];
-            [ProgressHUD setAnimationDelay:1.0];
+            //            [SVWLProgressHUD dismissWithError:@"数据有误"];
+            [WLProgressHUD showError:@"数据有误"];
+            //            [WLProgressHUD dismiss];
+            [WLProgressHUD setAnimationDelay:1.0];
             errorBlock?errorBlock(nil):nil;
         }else{
-            [ProgressHUD dismiss];
+            [WLProgressHUD dismiss];
             completionBlock(responseData,NO);
         }
     } errorHandler:^(MKNetworkOperation *completedOperation, NSError *error) {
-        [ProgressHUD showError:SEVER_ERROR_STRING];
-        [ProgressHUD setAnimationDelay:1.0];
+        [WLProgressHUD showError:SEVER_ERROR_STRING];
+        [WLProgressHUD setAnimationDelay:1.0];
         DLog(@"%@%@",SEVER_ERROR_STRING,url);
         errorBlock?errorBlock(nil):nil;
     }];
@@ -177,7 +177,7 @@ static NetEngine *_instance=nil;
     
     
 //    if(maskName!=nil)
-        [ProgressHUD show:maskName Interaction:NO];
+        [WLProgressHUD show:maskName Interaction:NO];
     //MKNetworkOperation *operation = [engine operationWithPath:@"addPrblem" params:params httpMethod:@"POST"];
     //[operation addFile:imagePath forKey:@"PIMG" mimeType:@"png"];
     //MKNetworkOperation *op = [self operationWithPath:url params:nil httpMethod:@"GET"];
@@ -201,12 +201,12 @@ static NetEngine *_instance=nil;
             DLog(@"Data from server:%@",responseString);
         }
         if (!responseString) {
-            [ProgressHUD showError:@"数据有误"];
-            //            [ProgressHUD dismiss];
-            [ProgressHUD setAnimationDelay:1.0];
+            [WLProgressHUD showError:@"数据有误"];
+            //            [WLProgressHUD dismiss];
+            [WLProgressHUD setAnimationDelay:1.0];
             errorBlock?errorBlock(nil):nil;
         }else{
-            [ProgressHUD dismiss];
+            [WLProgressHUD dismiss];
             //去除首尾的空白和换行字符
             //            responseString = [responseString stringByReplacingOccurrencesOfString:@"\t" withString:@""];
             /*
@@ -225,10 +225,10 @@ static NetEngine *_instance=nil;
              }*/
         }
     } errorHandler:^(MKNetworkOperation *completedOperation, NSError *error) {
-        //        [SVProgressHUD dismissWithError:@"网络超时" afterDelay:2];
-        [ProgressHUD showError:SEVER_ERROR_STRING];
-        //            [ProgressHUD dismiss];
-        [ProgressHUD setAnimationDelay:1.0];
+        //        [SVWLProgressHUD dismissWithError:@"网络超时" afterDelay:2];
+        [WLProgressHUD showError:SEVER_ERROR_STRING];
+        //            [WLProgressHUD dismiss];
+        [WLProgressHUD setAnimationDelay:1.0];
         DLog(@"%@%@",SEVER_ERROR_STRING,url);
         errorBlock?errorBlock(nil):nil;
     }];
@@ -251,7 +251,7 @@ static NetEngine *_instance=nil;
     
     
     if(maskName!=nil)
-    [ProgressHUD show:maskName Interaction:NO];
+    [WLProgressHUD show:maskName Interaction:NO];
     MKNetworkOperation *op = [self operationWithPath:url params:params httpMethod:@"POST"];
     if (datas.count != DataTypes.count || DataTypes.count != dataKeys.count || datas.count!= dataKeys.count) {
         NSAssert(datas.count == DataTypes.count && DataTypes.count == dataKeys.count && datas.count== dataKeys.count, @"dataParams invaild because count not equal");
@@ -275,12 +275,12 @@ static NetEngine *_instance=nil;
             DLog(@"Data from server:%@",responseString);
         }
         if (!responseString) {
-            [ProgressHUD showError:@"数据有误"];
-            //            [ProgressHUD dismiss];
-            [ProgressHUD setAnimationDelay:1.0];
+            [WLProgressHUD showError:@"数据有误"];
+            //            [WLProgressHUD dismiss];
+            [WLProgressHUD setAnimationDelay:1.0];
             errorBlock?errorBlock(nil):nil;
         }else{
-            [ProgressHUD dismiss];
+            [WLProgressHUD dismiss];
             //去除首尾的空白和换行字符
             //            responseString = [responseString stringByReplacingOccurrencesOfString:@"\t" withString:@""];
             /*
@@ -299,10 +299,10 @@ static NetEngine *_instance=nil;
              }*/
         }
     } errorHandler:^(MKNetworkOperation *completedOperation, NSError *error) {
-        //        [SVProgressHUD dismissWithError:@"网络超时" afterDelay:2];
-        [ProgressHUD showError:SEVER_ERROR_STRING];
-        //            [ProgressHUD dismiss];
-        [ProgressHUD setAnimationDelay:1.0];
+        //        [SVWLProgressHUD dismissWithError:@"网络超时" afterDelay:2];
+        [WLProgressHUD showError:SEVER_ERROR_STRING];
+        //            [WLProgressHUD dismiss];
+        [WLProgressHUD setAnimationDelay:1.0];
         DLog(@"%@%@",SEVER_ERROR_STRING,url);
         errorBlock?errorBlock(nil):nil;
     }];
@@ -357,14 +357,14 @@ static NetEngine *_instance=nil;
             }
         }
         if ([[Utility Share] offline]) {
-            [ProgressHUD dismiss];
+            [WLProgressHUD dismiss];
             errorBlock?errorBlock(nil):nil;
             return nil;
         }
     }
      */
 //    if(maskName!=nil)
-        [ProgressHUD show:maskName];
+        [WLProgressHUD show:maskName];
     
     MKNetworkOperation *op = [self operationWithPath:url params:nil httpMethod:@"GET"];
     //[op setCustomPostDataEncodingHandler:^NSString *(NSDictionary *postDataDict) {return msg;}forType:@"text/xml"];
@@ -383,14 +383,14 @@ static NetEngine *_instance=nil;
             DLog(@"Data from server:%@",responseString);
         }
         if (!responseString) {
-            //            [SVProgressHUD dismissWithError:@"数据有误"];
-//            [ProgressHUD showError:@"数据有误"];
-                        [ProgressHUD dismiss];
-            [ProgressHUD setAnimationDelay:1.0];
+            //            [SVWLProgressHUD dismissWithError:@"数据有误"];
+//            [WLProgressHUD showError:@"数据有误"];
+                        [WLProgressHUD dismiss];
+            [WLProgressHUD setAnimationDelay:1.0];
             errorBlock?errorBlock(nil):nil;
         }else{
             DLog(@"%@",[responseString JSONValue]);
-            [ProgressHUD dismiss];
+            [WLProgressHUD dismiss];
             completionBlock([responseString JSONValue],NO);
             /*
             if (usecache && storeKey) {
@@ -403,7 +403,7 @@ static NetEngine *_instance=nil;
              */
         }
     } errorHandler:^(MKNetworkOperation *completedOperation, NSError *error) {
-        [ProgressHUD showError:SEVER_ERROR_STRING];
+        [WLProgressHUD showError:SEVER_ERROR_STRING];
 
              DLog(@"%@%@",SEVER_ERROR_STRING,url);
         errorBlock?errorBlock(nil):nil;
@@ -438,14 +438,14 @@ static NetEngine *_instance=nil;
      }
      }
      if ([[Utility Share] offline]) {
-     [ProgressHUD dismiss];
+     [WLProgressHUD dismiss];
      errorBlock?errorBlock(nil):nil;
      return nil;
      }
      }
      */
 //    if(maskName!=nil)
-        [ProgressHUD show:maskName];
+        [WLProgressHUD show:maskName];
     
     MKNetworkOperation *op = [self operationWithPath:url params:params httpMethod:params?@"POST":@"GET"];
     //    if (cookie) {
@@ -470,12 +470,12 @@ static NetEngine *_instance=nil;
             DLog(@"Data from server:%@",responseString);
         }
         if (!responseString) {
-            [ProgressHUD showError:@"数据有误"];
-            //            [ProgressHUD dismiss];
-            [ProgressHUD setAnimationDelay:1.0];
+            [WLProgressHUD showError:@"数据有误"];
+            //            [WLProgressHUD dismiss];
+            [WLProgressHUD setAnimationDelay:1.0];
             errorBlock?errorBlock(nil):nil;
         }else{
-            [ProgressHUD dismiss];
+            [WLProgressHUD dismiss];
             //去除首尾的空白和换行字符
             //            responseString = [responseString stringByReplacingOccurrencesOfString:@"\t" withString:@""];
             responseString = [responseString stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
@@ -491,7 +491,7 @@ static NetEngine *_instance=nil;
              }*/
         }
     } errorHandler:^(MKNetworkOperation *completedOperation, NSError *error) {
-        [ProgressHUD showError:SEVER_ERROR_STRING];
+        [WLProgressHUD showError:SEVER_ERROR_STRING];
         DLog(@"%@%@",SEVER_ERROR_STRING,url);
         errorBlock?errorBlock(error):nil;
     }];
@@ -516,7 +516,7 @@ static NetEngine *_instance=nil;
                                withMask:(NSString *)maskName
 {
 //        if(maskName!=nil)
-        [ProgressHUD show:maskName];
+        [WLProgressHUD show:maskName];
     
     MKNetworkOperation *op = [self operationWithURLString:url params:params httpMethod:params?@"POST":@"GET"];
        [op addCompletionHandler:^(MKNetworkOperation *completedOperation) {
@@ -529,17 +529,17 @@ static NetEngine *_instance=nil;
             DLog(@"Data from server:%@",responseString);
         }
         if (!responseString) {
-            [ProgressHUD showError:@"数据有误"];
-            [ProgressHUD setAnimationDelay:1.0];
+            [WLProgressHUD showError:@"数据有误"];
+            [WLProgressHUD setAnimationDelay:1.0];
             errorBlock?errorBlock(nil):nil;
         }else{
-            [ProgressHUD dismiss];
+            [WLProgressHUD dismiss];
                   responseString = [responseString stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
             
             completionBlock([responseString JSONValue],NO);
                   }
     } errorHandler:^(MKNetworkOperation *completedOperation, NSError *error) {
-        [ProgressHUD showError:SEVER_ERROR_STRING];
+        [WLProgressHUD showError:SEVER_ERROR_STRING];
         DLog(@"%@%@",SEVER_ERROR_STRING,url);
         errorBlock?errorBlock(error):nil;
     }];
@@ -592,13 +592,13 @@ static NetEngine *_instance=nil;
             }
         }
         if ([[Utility Share] offline]) {
-            [ProgressHUD dismiss];
+            [WLProgressHUD dismiss];
             errorBlock?errorBlock(nil):nil;
             return nil;
         }
     }
     if(maskName!=nil)
-        [ProgressHUD showError:maskName];
+        [WLProgressHUD showError:maskName];
     
     MKNetworkOperation *op = [self operationWithPath:@"" params:nil httpMethod:@"SOAP"];
     [op setCustomPostDataEncodingHandler:^NSString *(NSDictionary *postDataDict) {return msg;}forType:@"text/xml"];
@@ -624,12 +624,12 @@ static NetEngine *_instance=nil;
             }
         }
         if (!doc || !items) {
-            [ProgressHUD showError:@"数据有误"];
-            [ProgressHUD dismiss];
+            [WLProgressHUD showError:@"数据有误"];
+            [WLProgressHUD dismiss];
             errorBlock?errorBlock(nil):nil;
         }else{
             DLog(@"%@",[jsonString JSONValue]);
-            [ProgressHUD dismiss];
+            [WLProgressHUD dismiss];
             completionBlock([jsonString JSONValue],NO);
             if (usecache && storeKey) {
                 if (!jsonString){
@@ -640,7 +640,7 @@ static NetEngine *_instance=nil;
             }
         }
     } errorHandler:^(MKNetworkOperation *completedOperation, NSError *error) {
-        [ProgressHUD showError:@"网络超时"];
+        [WLProgressHUD showError:@"网络超时"];
         DLog(@"errorHandler网络超时:%@",msg);
         errorBlock?errorBlock(nil):nil;
     }];

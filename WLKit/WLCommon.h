@@ -6,14 +6,14 @@
 //  Copyright (c) 2015年 HotWordLand. All rights reserved.
 //
 
-#define RGBACOLOR(r,g,b,a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(a)]
-#define IS_IPHONE6_6PLUS [DeviceJudge currentResolution] ==iPhone6HiRes||[DeviceJudge currentResolution]==iPhone6PlusHiRes
-#define IS_IPHONE6 [DeviceJudge currentResolution] ==iPhone6HiRes
-#define IS_IPHONE6PLUS [DeviceJudge currentResolution] ==iPhone6PlusHiRes
-#define SCREEN_RECT [[UIScreen mainScreen] bounds];
-#define SCREEN_WIDTH [[UIScreen mainScreen] bounds] .size.width
-#define SCREEN_HEIGHT [[UIScreen mainScreen] bounds] .size.height
-#define MAIN_STROYBOARD [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]]
+#define WL_RGBACOLOR(r,g,b,a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(a)]
+#define WL_IS_IPHONE6_6PLUS [DeviceJudge currentResolution] ==iPhone6HiRes||[DeviceJudge currentResolution]==iPhone6PlusHiRes
+#define WL_IS_IPHONE6 [DeviceJudge currentResolution] ==iPhone6HiRes
+#define WL_IS_IPHONE6PLUS [DeviceJudge currentResolution] ==iPhone6PlusHiRes
+#define WL_SCREEN_RECT [[UIScreen mainScreen] bounds];
+#define WL_SCREEN_WIDTH [[UIScreen mainScreen] bounds] .size.width
+#define WL_SCREEN_HEIGHT [[UIScreen mainScreen] bounds] .size.height
+#define WL_MAIN_STROYBOARD [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]]
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import "ConstraintPack.h"

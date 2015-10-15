@@ -9,7 +9,7 @@
 #define SEVER_ERROR_STRING @"服务器错误"
 #import "NSDictionaryCategory.h"
 #import "MKNetworkEngine.h"
-#import "ProgressHUD.h"
+#import "WLProgressHUD.h"
 #import "ConfirNetEngineUrl.h"
 @interface NetEngine : MKNetworkEngine
 typedef void (^CurrencyResponseBlock)(id resData,BOOL isCache);

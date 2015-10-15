@@ -111,8 +111,8 @@
 		FEF4B73B1B2C0E2600D5597A /* NetEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = FEF4B7211B2C0E2600D5597A /* NetEngine.m */; };
 		FEF4B73C1B2C0E2600D5597A /* NSDictionaryCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = FEF4B7221B2C0E2600D5597A /* NSDictionaryCategory.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FEF4B73D1B2C0E2600D5597A /* NSDictionaryCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = FEF4B7231B2C0E2600D5597A /* NSDictionaryCategory.m */; };
-		FEF4B7731B2C1D6300D5597A /* ProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = FEF4B7701B2C1D6300D5597A /* ProgressHUD.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FEF4B7741B2C1D6300D5597A /* ProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = FEF4B7711B2C1D6300D5597A /* ProgressHUD.m */; };
+		FEF4B7731B2C1D6300D5597A /* WLProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = FEF4B7701B2C1D6300D5597A /* WLProgressHUD.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FEF4B7741B2C1D6300D5597A /* WLProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = FEF4B7711B2C1D6300D5597A /* WLProgressHUD.m */; };
 		FEF4B7C81B2C2B2900D5597A /* license in Resources */ = {isa = PBXBuildFile; fileRef = FEF4B7C11B2C2B2900D5597A /* license */; };
 		FEF4B7C91B2C2B2900D5597A /* navigationBarBg.png in Resources */ = {isa = PBXBuildFile; fileRef = FEF4B7C21B2C2B2900D5597A /* navigationBarBg.png */; };
 		FEF4B7CA1B2C2B2900D5597A /* readme.markdown in Sources */ = {isa = PBXBuildFile; fileRef = FEF4B7C31B2C2B2900D5597A /* readme.markdown */; };
@@ -274,8 +274,8 @@
 		FEF4B7211B2C0E2600D5597A /* NetEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetEngine.m; sourceTree = "<group>"; };
 		FEF4B7221B2C0E2600D5597A /* NSDictionaryCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDictionaryCategory.h; sourceTree = "<group>"; };
 		FEF4B7231B2C0E2600D5597A /* NSDictionaryCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDictionaryCategory.m; sourceTree = "<group>"; };
-		FEF4B7701B2C1D6300D5597A /* ProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressHUD.h; sourceTree = "<group>"; };
-		FEF4B7711B2C1D6300D5597A /* ProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressHUD.m; sourceTree = "<group>"; };
+		FEF4B7701B2C1D6300D5597A /* WLProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLProgressHUD.h; sourceTree = "<group>"; };
+		FEF4B7711B2C1D6300D5597A /* WLProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WLProgressHUD.m; sourceTree = "<group>"; };
 		FEF4B7C11B2C2B2900D5597A /* license */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = license; sourceTree = "<group>"; };
 		FEF4B7C21B2C2B2900D5597A /* navigationBarBg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navigationBarBg.png; sourceTree = "<group>"; };
 		FEF4B7C31B2C2B2900D5597A /* readme.markdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = readme.markdown; sourceTree = "<group>"; };
@@ -698,8 +698,8 @@
 		FEF4B76E1B2C1D6300D5597A /* ProgressHUD */ = {
 			isa = PBXGroup;
 			children = (
-				FEF4B7701B2C1D6300D5597A /* ProgressHUD.h */,
-				FEF4B7711B2C1D6300D5597A /* ProgressHUD.m */,
+				FEF4B7701B2C1D6300D5597A /* WLProgressHUD.h */,
+				FEF4B7711B2C1D6300D5597A /* WLProgressHUD.m */,
 			);
 			path = ProgressHUD;
 			sourceTree = SOURCE_ROOT;
@@ -756,7 +756,7 @@
 				FEA834991B27DC7600438BF2 /* NSObject-Description.h in Headers */,
 				FEF4B6F71B2C0BFB00D5597A /* MKNetworkKit.h in Headers */,
 				FE11D4261BA92B9B009B0C61 /* NSString+SBJSON.h in Headers */,
-				FEF4B7731B2C1D6300D5597A /* ProgressHUD.h in Headers */,
+				FEF4B7731B2C1D6300D5597A /* WLProgressHUD.h in Headers */,
 				FEF4B6F51B2C0BFB00D5597A /* MKNetworkEngine.h in Headers */,
 				FEF4B73C1B2C0E2600D5597A /* NSDictionaryCategory.h in Headers */,
 				FEA834E91B27ECF800438BF2 /* DeviceJudge.h in Headers */,
@@ -993,7 +993,7 @@
 				FEF4B72B1B2C0E2600D5597A /* NSString+SBJSON.m in Sources */,
 				FEA834EA1B27ECF800438BF2 /* DeviceJudge.m in Sources */,
 				FEA834921B27DC7600438BF2 /* ConstraintUtilities+Layout.m in Sources */,
-				FEF4B7741B2C1D6300D5597A /* ProgressHUD.m in Sources */,
+				FEF4B7741B2C1D6300D5597A /* WLProgressHUD.m in Sources */,
 				FEF4B6EE1B2C0BFB00D5597A /* NSDictionary+RequestEncoding.m in Sources */,
 				FEF4B6F21B2C0BFB00D5597A /* UIAlertView+MKNetworkKitAdditions.m in Sources */,
 				FEF4B7031B2C0D6600D5597A /* WLReachability.m in Sources */,

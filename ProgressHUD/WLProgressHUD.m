@@ -9,20 +9,20 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "ProgressHUD.h"
+#import "WLProgressHUD.h"
 
-@implementation ProgressHUD
+@implementation WLProgressHUD
 
 @synthesize interaction, window, background, hud, spinner, image, label;
 
 //-------------------------------------------------------------------------------------------------------------------------------------------------
-+ (ProgressHUD *)shared
++ (WLProgressHUD *)shared
 //-------------------------------------------------------------------------------------------------------------------------------------------------
 {
 	static dispatch_once_t once = 0;
-	static ProgressHUD *progressHUD;
+	static WLProgressHUD *progressHUD;
 	//---------------------------------------------------------------------------------------------------------------------------------------------
-	dispatch_once(&once, ^{ progressHUD = [[ProgressHUD alloc] init]; });
+	dispatch_once(&once, ^{ progressHUD = [[WLProgressHUD alloc] init]; });
 	//---------------------------------------------------------------------------------------------------------------------------------------------
     
 	return progressHUD;
@@ -56,7 +56,7 @@
 //-------------------------------------------------------------------------------------------------------------------------------------------------
 {
 	[self shared].interaction = YES;
-	[[self shared] hudMake:status image:HUD_IMAGE_SUCCESS spin:NO hide:YES];
+	[[self shared] hudMake:status image:WL_HUD_IMAGE_SUCCESS spin:NO hide:YES];
 }
 
 //-------------------------------------------------------------------------------------------------------------------------------------------------
@@ -64,7 +64,7 @@
 //-------------------------------------------------------------------------------------------------------------------------------------------------
 {
 	[self shared].interaction = Interaction;
-	[[self shared] hudMake:status image:HUD_IMAGE_SUCCESS spin:NO hide:YES];
+	[[self shared] hudMake:status image:WL_HUD_IMAGE_SUCCESS spin:NO hide:YES];
 }
 
 //-------------------------------------------------------------------------------------------------------------------------------------------------
@@ -72,7 +72,7 @@
 //-------------------------------------------------------------------------------------------------------------------------------------------------
 {
 	[self shared].interaction = YES;
-	[[self shared] hudMake:status image:HUD_IMAGE_ERROR spin:NO hide:YES];
+	[[self shared] hudMake:status image:WL_HUD_IMAGE_ERROR spin:NO hide:YES];
 }
 
 //-------------------------------------------------------------------------------------------------------------------------------------------------
@@ -80,7 +80,7 @@
 //-------------------------------------------------------------------------------------------------------------------------------------------------
 {
 	[self shared].interaction = Interaction;
-	[[self shared] hudMake:status image:HUD_IMAGE_ERROR spin:NO hide:YES];
+	[[self shared] hudMake:status image:WL_HUD_IMAGE_ERROR spin:NO hide:YES];
 }
 
 //-------------------------------------------------------------------------------------------------------------------------------------------------
@@ -131,7 +131,7 @@
 	{
 		hud = [[UIToolbar alloc] initWithFrame:CGRectZero];
 		hud.translucent = YES;
-		hud.backgroundColor = HUD_BACKGROUND_COLOR;
+		hud.backgroundColor = WL_HUD_BACKGROUND_COLOR;
 		hud.layer.cornerRadius = 10;
 		hud.layer.masksToBounds = YES;
 		[self registerNotifications];
@@ -142,7 +142,7 @@
 		if (interaction == NO)
 		{
 			background = [[UIView alloc] initWithFrame:window.frame];
-			background.backgroundColor = HUD_WINDOW_COLOR;
+			background.backgroundColor = WL_HUD_WINDOW_COLOR;
 			[window addSubview:background];
 			[background addSubview:hud];
 		}
@@ -152,7 +152,7 @@
 	if (spinner == nil)
 	{
 		spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
-		spinner.color = HUD_SPINNER_COLOR;
+		spinner.color = WL_HUD_SPINNER_COLOR;
 		spinner.hidesWhenStopped = YES;
 	}
 	if (spinner.superview == nil) [hud addSubview:spinner];
@@ -166,8 +166,8 @@
 	if (label == nil)
 	{
 		label = [[UILabel alloc] initWithFrame:CGRectZero];
-		label.font = HUD_STATUS_FONT;
-		label.textColor = HUD_STATUS_COLOR;
+		label.font = WL_HUD_STATUS_FONT;
+		label.textColor = WL_HUD_STATUS_COLOR;
 		label.backgroundColor = [UIColor clearColor];
 		label.textAlignment = NSTextAlignmentCenter;
 		label.baselineAdjustment = UIBaselineAdjustmentAlignCenters;
