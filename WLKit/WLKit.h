@@ -20,4 +20,5 @@ FOUNDATION_EXPORT const unsigned char WLKitVersionString[];
 #import <WLKit/UIView+Toast.h>
 #import <WLKit/NSDictionary+FixNSNull.h>
 #import <WLKit/UICatalogWL.h>
+#import <WLKit/LYHTTPClient.h>
 #define ALERT_TOAST_VIEW(CONTENT) [self.view makeToast:CONTENT duration:2.0f position:CSToastPositionCenter];

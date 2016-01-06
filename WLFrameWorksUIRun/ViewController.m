@@ -30,7 +30,7 @@
     //在父视图居中
     CENTER(view);
     /*** ***/
-    
+    [self request];
    }
 -(void)request
 {
@@ -49,7 +49,12 @@
 //    } onError:^(NSError *error) {
 //        
 //    } useCache:NO withMask:nil];
+   [LYHTTPClient GET:@"http://localhost/MyThinkingPhp/Home/XuecheDiscuss/index" parameters:nil timeoutInterval:60 cachePolicy:LYHTTPClientReturnCacheDataThenLoad success:^(NSURLSessionDataTask *task, id responseObject) {
+       NSLog(@"%@",responseObject);
+   } failure:^(NSURLSessionDataTask *task, NSError *error) {
+       NSLog(@"%@",error);
 
+   }];
 
 }
 -(CGRect)getCircleFrameWithLayer:(CAShapeLayer *)circlePathLayer
