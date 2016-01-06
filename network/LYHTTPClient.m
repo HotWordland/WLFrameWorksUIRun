@@ -174,7 +174,12 @@ typedef NS_ENUM(NSUInteger, LYHTTPClientRequestType) {
 }
 + (instancetype)client{
     NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
-   return [[LYHTTPClient alloc] initWithBaseURL:[NSURL URLWithString:LYHTTPClientURLString] sessionConfiguration:configuration];
+   LYHTTPClient *client = [[LYHTTPClient alloc] initWithBaseURL:[NSURL URLWithString:LYHTTPClientURLString] sessionConfiguration:configuration];
+    NSMutableSet *mgrSet = [NSMutableSet set];
+    mgrSet.set = client.responseSerializer.acceptableContentTypes;
+    [mgrSet addObject:@"text/html"];
+    client.responseSerializer.acceptableContentTypes = mgrSet;
+   return client;
     
 }
 @end

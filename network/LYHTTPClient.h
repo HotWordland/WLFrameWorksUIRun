@@ -6,8 +6,8 @@
 //  Copyright © 2015年 LianLeven. All rights reserved.
 //
 
-#import <AFNetworking/AFNetworking.h>
-#import <YYCache/YYCache.h>
+#import "AFNetworking.h"
+#import "YYCache.h"
 typedef NS_ENUM(NSUInteger, LYHTTPClientRequestCachePolicy){
     LYHTTPClientReturnCacheDataThenLoad = 0,///< 有缓存就先返回缓存，同步请求数据
     LYHTTPClientReloadIgnoringLocalCacheData, ///< 忽略缓存，重新请求
