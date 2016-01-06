@@ -17,8 +17,6 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import "ConstraintPack.h"
-#import "SBJSON.h"
-#import "NSString+SBJSON.h"
 @interface WLCommon : NSObject
 ///App Group 路径
 + (NSURL *)localDocumentsDirectory;

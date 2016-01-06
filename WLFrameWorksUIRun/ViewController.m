@@ -43,12 +43,12 @@
 //    } onError:^(NSError *error) {
 //        
 //    } useCache:NO withMask:nil];
-    [NetEngine ShareWithbaseDomain:BaseDomain basePath:BasePath basePort:nil];
-    [NetEngine createHttpActionFullUrl:@"https://www.baidu.com" withParams:nil onCompletion:^(id resData, BOOL isCache) {
-        DLog(@"%@",resData);
-    } onError:^(NSError *error) {
-        
-    } useCache:NO withMask:nil];
+//    [NetEngine ShareWithbaseDomain:BaseDomain basePath:BasePath basePort:nil];
+//    [NetEngine createHttpActionFullUrl:@"https://www.baidu.com" withParams:nil onCompletion:^(id resData, BOOL isCache) {
+//        DLog(@"%@",resData);
+//    } onError:^(NSError *error) {
+//        
+//    } useCache:NO withMask:nil];
 
 
 }

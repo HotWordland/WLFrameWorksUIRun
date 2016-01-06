@@ -17,8 +17,6 @@ FOUNDATION_EXPORT const unsigned char WLKitVersionString[];
 // In this header, you should import all the public headers of your framework using statements like #import <WLKit/PublicHeader.h>
 #import<WLKit/WLCommon.h>
 #import<WLKit/DeviceJudge.h>
-#import <WLKit/MKNetworkKit.h>
-#import <WLKit/NetEngine.h>
 #import <WLKit/UIView+Toast.h>
 #import <WLKit/NSDictionary+FixNSNull.h>
 #import <WLKit/UICatalogWL.h>
