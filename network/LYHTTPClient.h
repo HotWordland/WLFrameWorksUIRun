@@ -44,5 +44,5 @@ extern  NSString * const LYHTTPClientRequestCache;///< 缓存的name
                    cachePolicy:(LYHTTPClientRequestCachePolicy)cachePolicy
                        success:(void (^)(NSURLSessionDataTask *task, id responseObject))success
                        failure:(void (^)(NSURLSessionDataTask *task, NSError *error))failure;
-
++ (instancetype)client;
 @end

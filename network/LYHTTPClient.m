@@ -120,7 +120,9 @@ typedef NS_ENUM(NSUInteger, LYHTTPClientRequestType) {
      [manager.requestSerializer didChangeValueForKey:@"timeoutInterval"];
     switch (type) {
         case LYHTTPClientRequestTypeGET:{
-            return [manager GET:URLString parameters:parameters success:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull responseObject) {
+            return [manager GET:URLString parameters:parameters progress:^(NSProgress * _Nonnull downloadProgress) {
+                
+            } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull responseObject) {
                 if ([responseObject isKindOfClass:[NSData class]]) {
                     responseObject = [NSJSONSerialization objectWithJSONData:responseObject];
                 }
@@ -132,7 +134,9 @@ typedef NS_ENUM(NSUInteger, LYHTTPClientRequestType) {
             break;
         }
         case LYHTTPClientRequestTypePOST:{
-            return [manager POST:URLString parameters:parameters success:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull responseObject) {
+            return [manager POST:URLString parameters:parameters progress:^(NSProgress * _Nonnull downloadProgress) {
+                
+            } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull responseObject) {
                 if ([responseObject isKindOfClass:[NSData class]]) {
                     responseObject = [NSJSONSerialization objectWithJSONData:responseObject];
                 }
@@ -147,21 +151,6 @@ typedef NS_ENUM(NSUInteger, LYHTTPClientRequestType) {
             break;
     }
     
-}
-/// URLString 应该是全url 上传单个文件
-+ (NSURLSessionUploadTask *)upload:(NSString *)URLString filePath:(NSString *)filePath parameters:(id)parameters{
-    NSURL *URL = [NSURL URLWithString:URLString];
-    NSURLRequest *request = [NSURLRequest requestWithURL:URL];
-    NSURL *fileUrl = [NSURL fileURLWithPath:filePath];
-    NSURLSessionUploadTask *uploadTask = [[LYHTTPClient client] uploadTaskWithRequest:request fromFile:fileUrl progress:nil completionHandler:^(NSURLResponse *response, id responseObject, NSError *error) {
-        if (error) {
-            NSLog(@"Error: %@", error);
-        } else {
-            NSLog(@"Success: %@ %@", response, responseObject);
-        }
-    }];
-    [uploadTask resume];
-    return uploadTask;
 }
 + (instancetype)sharedClient{
     static LYHTTPClient *sharedClient = nil;

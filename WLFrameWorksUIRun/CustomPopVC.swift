@@ -19,7 +19,7 @@ class CustomPopVC: UIViewController {
     }
 
     @IBAction func close(sender: UIButton) {
-        if let thisDelegate: () = delegate?.clickClose(){
+        if let _: () = delegate?.clickClose(){
           print("delegate has value")
         }
     }

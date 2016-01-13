@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F21AF6A1C45F75500729B21 /* WLNetEnigne.h in Headers */ = {isa = PBXBuildFile; fileRef = 0F21AF681C45F75500729B21 /* WLNetEnigne.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0F21AF6B1C45F75500729B21 /* WLNetEnigne.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F21AF691C45F75500729B21 /* WLNetEnigne.m */; };
 		0F987EB11C3D138500741D09 /* WLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEA834501B27DC4F00438BF2 /* WLKit.framework */; };
 		0F987EB71C3D15C200741D09 /* LYHTTPClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 0F987EB31C3D15C200741D09 /* LYHTTPClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0F987EB81C3D15C200741D09 /* LYHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F987EB41C3D15C200741D09 /* LYHTTPClient.m */; };
@@ -67,8 +69,6 @@
 		FEA4AE371B57E3C60060F511 /* UIImage+WLCatalog.h in Headers */ = {isa = PBXBuildFile; fileRef = FEA4AE351B57E3C60060F511 /* UIImage+WLCatalog.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FEA4AE381B57E3C60060F511 /* UIImage+WLCatalog.m in Sources */ = {isa = PBXBuildFile; fileRef = FEA4AE361B57E3C60060F511 /* UIImage+WLCatalog.m */; };
 		FEA4AE3B1B57E5300060F511 /* UICatalogWL.h in Headers */ = {isa = PBXBuildFile; fileRef = FEA4AE3A1B57E5300060F511 /* UICatalogWL.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FEA4F1591B3B940E00DC7FEF /* NSDictionary+FixNSNull.h in Headers */ = {isa = PBXBuildFile; fileRef = FEA4F1571B3B940E00DC7FEF /* NSDictionary+FixNSNull.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FEA4F15A1B3B940E00DC7FEF /* NSDictionary+FixNSNull.m in Sources */ = {isa = PBXBuildFile; fileRef = FEA4F1581B3B940E00DC7FEF /* NSDictionary+FixNSNull.m */; };
 		FEA834281B27DC2400438BF2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FEA834271B27DC2400438BF2 /* main.m */; };
 		FEA8342B1B27DC2400438BF2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FEA8342A1B27DC2400438BF2 /* AppDelegate.m */; };
 		FEA8342E1B27DC2400438BF2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEA8342D1B27DC2400438BF2 /* ViewController.m */; };
@@ -145,6 +145,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0F21AF681C45F75500729B21 /* WLNetEnigne.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WLNetEnigne.h; path = Network/WLNetEnigne.h; sourceTree = SOURCE_ROOT; };
+		0F21AF691C45F75500729B21 /* WLNetEnigne.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WLNetEnigne.m; path = Network/WLNetEnigne.m; sourceTree = SOURCE_ROOT; };
 		0F987EB31C3D15C200741D09 /* LYHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYHTTPClient.h; sourceTree = "<group>"; };
 		0F987EB41C3D15C200741D09 /* LYHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYHTTPClient.m; sourceTree = "<group>"; };
 		0F987EB51C3D15C200741D09 /* NSJSONSerialization+LYJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSJSONSerialization+LYJSON.h"; sourceTree = "<group>"; };
@@ -205,8 +207,6 @@
 		FEA4AE351B57E3C60060F511 /* UIImage+WLCatalog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+WLCatalog.h"; sourceTree = "<group>"; };
 		FEA4AE361B57E3C60060F511 /* UIImage+WLCatalog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+WLCatalog.m"; sourceTree = "<group>"; };
 		FEA4AE3A1B57E5300060F511 /* UICatalogWL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICatalogWL.h; sourceTree = "<group>"; };
-		FEA4F1571B3B940E00DC7FEF /* NSDictionary+FixNSNull.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+FixNSNull.h"; sourceTree = "<group>"; };
-		FEA4F1581B3B940E00DC7FEF /* NSDictionary+FixNSNull.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+FixNSNull.m"; sourceTree = "<group>"; };
 		FEA834221B27DC2400438BF2 /* WLFrameWorksUIRun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WLFrameWorksUIRun.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEA834261B27DC2400438BF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FEA834271B27DC2400438BF2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -312,6 +312,8 @@
 				0F987EB41C3D15C200741D09 /* LYHTTPClient.m */,
 				0F987EB51C3D15C200741D09 /* NSJSONSerialization+LYJSON.h */,
 				0F987EB61C3D15C200741D09 /* NSJSONSerialization+LYJSON.m */,
+				0F21AF681C45F75500729B21 /* WLNetEnigne.h */,
+				0F21AF691C45F75500729B21 /* WLNetEnigne.m */,
 			);
 			name = Network;
 			path = network;
@@ -649,8 +651,6 @@
 			children = (
 				FEA834AB1B27DD9F00438BF2 /* WLCommon.h */,
 				FEA834AC1B27DD9F00438BF2 /* WLCommon.m */,
-				FEA4F1571B3B940E00DC7FEF /* NSDictionary+FixNSNull.h */,
-				FEA4F1581B3B940E00DC7FEF /* NSDictionary+FixNSNull.m */,
 			);
 			name = WLCommon;
 			sourceTree = "<group>";
@@ -711,6 +711,7 @@
 				0FF05C111C3D468400111754 /* AFURLResponseSerialization.h in Headers */,
 				0FF05C211C3D468400111754 /* UIImage+AFNetworking.h in Headers */,
 				0F987EB71C3D15C200741D09 /* LYHTTPClient.h in Headers */,
+				0F21AF6A1C45F75500729B21 /* WLNetEnigne.h in Headers */,
 				FEA834551B27DC4F00438BF2 /* WLKit.h in Headers */,
 				FEA834AD1B27DD9F00438BF2 /* WLCommon.h in Headers */,
 				0FF05C131C3D468400111754 /* AFURLSessionManager.h in Headers */,
@@ -736,7 +737,6 @@
 				FEA834E91B27ECF800438BF2 /* DeviceJudge.h in Headers */,
 				0FF05C171C3D468400111754 /* AFAutoPurgingImageCache.h in Headers */,
 				FEA4AE371B57E3C60060F511 /* UIImage+WLCatalog.h in Headers */,
-				FEA4F1591B3B940E00DC7FEF /* NSDictionary+FixNSNull.h in Headers */,
 				0FF05C311C3D468400111754 /* YYKVStorage.h in Headers */,
 				0F987EB91C3D15C200741D09 /* NSJSONSerialization+LYJSON.h in Headers */,
 				FEA8349D1B27DC7600438BF2 /* NSView+BackgroundColor.h in Headers */,
@@ -972,11 +972,11 @@
 				0F987EBA1C3D15C200741D09 /* NSJSONSerialization+LYJSON.m in Sources */,
 				FE5D4D6B1BC2576300AC4CB7 /* NSDictionary+FixNSNull.m in Sources */,
 				FEA834901B27DC7600438BF2 /* ConstraintUtilities+Install.m in Sources */,
-				FEA4F15A1B3B940E00DC7FEF /* NSDictionary+FixNSNull.m in Sources */,
 				0FF05C281C3D468400111754 /* UIRefreshControl+AFNetworking.m in Sources */,
 				FEF4B7CC1B2C2B2900D5597A /* UIView+Toast.m in Sources */,
 				0FD9832B1BCA6DD4008FB923 /* NSString+Extended.m in Sources */,
 				FEA4AE381B57E3C60060F511 /* UIImage+WLCatalog.m in Sources */,
+				0F21AF6B1C45F75500729B21 /* WLNetEnigne.m in Sources */,
 				0FF05C341C3D468400111754 /* YYMemoryCache.m in Sources */,
 				FEA834A01B27DC7600438BF2 /* View-Nametag.m in Sources */,
 				0FF05C101C3D468400111754 /* AFURLRequestSerialization.m in Sources */,

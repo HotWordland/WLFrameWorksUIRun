@@ -6,7 +6,7 @@
 //  Copyright (c) 2015年 HotWordLand. All rights reserved.
 //
 #import "ViewController.h"
-#import <WLKit/WLKit.h>
+@import WLKit;
 @interface ViewController ()
 
 @end
@@ -34,22 +34,7 @@
    }
 -(void)request
 {
-//       [ProgressHUD showSuccess:@"YES"];
-//    [NetEngine ShareWithbaseDomain:BaseDomain basePath:BasePath basePort:nil];
-//    [NetEngine createHttpAction:@"selectcase.php" withParams:nil onCompletion:^(id resData, BOOL isCache) {
-//        NSString *str = [resData jsonEncodedKeyValueString];
-//        ALERT_TOAST_VIEW(str);
-//
-//    } onError:^(NSError *error) {
-//        
-//    } useCache:NO withMask:nil];
-//    [NetEngine ShareWithbaseDomain:BaseDomain basePath:BasePath basePort:nil];
-//    [NetEngine createHttpActionFullUrl:@"https://www.baidu.com" withParams:nil onCompletion:^(id resData, BOOL isCache) {
-//        DLog(@"%@",resData);
-//    } onError:^(NSError *error) {
-//        
-//    } useCache:NO withMask:nil];
-   [LYHTTPClient GET:@"http://localhost/MyThinkingPhp/Home/XuecheDiscuss/index" parameters:nil timeoutInterval:60 cachePolicy:LYHTTPClientReturnCacheDataThenLoad success:^(NSURLSessionDataTask *task, id responseObject) {
+   [WLNetEnigne GET:@"http://localhost/MyThinkingPhp/Home/XuecheDiscuss/index" parameters:nil timeoutInterval:60 cachePolicy:LYHTTPClientReturnCacheDataThenLoad success:^(NSURLSessionDataTask *task, id responseObject) {
        NSLog(@"%@",responseObject);
    } failure:^(NSURLSessionDataTask *task, NSError *error) {
        NSLog(@"%@",error);
