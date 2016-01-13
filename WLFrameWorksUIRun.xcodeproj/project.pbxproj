@@ -145,8 +145,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0F21AF681C45F75500729B21 /* WLNetEnigne.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WLNetEnigne.h; path = Network/WLNetEnigne.h; sourceTree = SOURCE_ROOT; };
-		0F21AF691C45F75500729B21 /* WLNetEnigne.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WLNetEnigne.m; path = Network/WLNetEnigne.m; sourceTree = SOURCE_ROOT; };
+		0F21AF681C45F75500729B21 /* WLNetEnigne.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WLNetEnigne.h; path = WLKit/Network/WLNetEnigne.h; sourceTree = SOURCE_ROOT; };
+		0F21AF691C45F75500729B21 /* WLNetEnigne.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WLNetEnigne.m; path = WLKit/Network/WLNetEnigne.m; sourceTree = SOURCE_ROOT; };
 		0F987EB31C3D15C200741D09 /* LYHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYHTTPClient.h; sourceTree = "<group>"; };
 		0F987EB41C3D15C200741D09 /* LYHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYHTTPClient.m; sourceTree = "<group>"; };
 		0F987EB51C3D15C200741D09 /* NSJSONSerialization+LYJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSJSONSerialization+LYJSON.h"; sourceTree = "<group>"; };
@@ -316,7 +316,7 @@
 				0F21AF691C45F75500729B21 /* WLNetEnigne.m */,
 			);
 			name = Network;
-			path = network;
+			path = WLKit/Network;
 			sourceTree = SOURCE_ROOT;
 		};
 		0FF05BD61C3D468400111754 /* AFNetworking */ = {
@@ -327,7 +327,8 @@
 				0FF05BE61C3D468400111754 /* README.md */,
 				0FF05BE71C3D468400111754 /* UIKit+AFNetworking */,
 			);
-			path = AFNetworking;
+			name = AFNetworking;
+			path = WLKit/AFNetworking;
 			sourceTree = SOURCE_ROOT;
 		};
 		0FF05BD71C3D468400111754 /* AFNetworking */ = {
@@ -384,7 +385,8 @@
 				0FF05BFE1C3D468400111754 /* README.md */,
 				0FF05BFF1C3D468400111754 /* YYCache */,
 			);
-			path = YYCache;
+			name = YYCache;
+			path = WLKit/YYCache;
 			sourceTree = SOURCE_ROOT;
 		};
 		0FF05BFF1C3D468400111754 /* YYCache */ = {
@@ -566,7 +568,8 @@
 				FEA834801B27DC7500438BF2 /* ConstraintPack.h */,
 				FEA834811B27DC7500438BF2 /* Nametag Utilities */,
 			);
-			path = "Constraints Pack";
+			name = "Constraints Pack";
+			path = "WLKit/Constraints Pack";
 			sourceTree = SOURCE_ROOT;
 		};
 		FEA834711B27DC7500438BF2 /* Constraint Description */ = {
@@ -670,7 +673,8 @@
 				FEF4B7701B2C1D6300D5597A /* WLProgressHUD.h */,
 				FEF4B7711B2C1D6300D5597A /* WLProgressHUD.m */,
 			);
-			path = ProgressHUD;
+			name = ProgressHUD;
+			path = WLKit/ProgressHUD;
 			sourceTree = SOURCE_ROOT;
 		};
 		FEF4B7C01B2C2B2900D5597A /* Toast */ = {
@@ -681,7 +685,8 @@
 				FEF4B7C31B2C2B2900D5597A /* readme.markdown */,
 				FEF4B7C41B2C2B2900D5597A /* Toast */,
 			);
-			path = Toast;
+			name = Toast;
+			path = WLKit/Toast;
 			sourceTree = SOURCE_ROOT;
 		};
 		FEF4B7C41B2C2B2900D5597A /* Toast */ = {
